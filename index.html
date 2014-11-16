@@ -1,0 +1,347 @@
+<!--
+Royal Drones 2014/2015 HTML5 Framework Presantation
+
+         Besmir Zekaj <zekajbesi@gmail.com>
+         Nardi Braho <nardi@yahoo.com>
+-->
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>QuadCopter-i. Objekti Fluturues</title>
+<title>Harry Fultz</title>
+    
+    
+
+    
+    
+
+	<meta name="description" content="QuadCopter-i. Objekti Fluturues">
+	<meta name="description" content="QuadCopter-i. Objekti Fluturues">
+	<meta name="author" content="hpubuntu" >
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="css/reveal.min.css">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/tomorrow.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/theme/app.css" id="theme">
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+		document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+	</script>
+
+
+</head>
+
+<body>
+
+
+	<div class="reveal">
+		<div class="slides">
+            
+            
+            
+            
+            
+            
+            
+			<section> <!-- Bllok -->
+                
+            <section>
+				<h1>Quadcopter-i.<p></p> "Objekti Fluturues"</h1>
+				<h3><a href="Besmir Zekaj"></a></h3>
+				<p>
+					<a href="http://facebook.com/zekajbesmir">Besmir Zekaj</a> / 
+                    <a href="https://twitter.com/zekajbesi">@zekajbesi</a>
+				</p>
+                <h3><a href="Nardi Braho"></a></h3>
+				<p>
+					<a href="http://facebook.com/cs.1.6.SoldieR">Nardi Braho</a> / 
+                    <a href="https://twitter.com/nardi_b">@nardi_b</a>
+				</p>
+			</section>
+            <section>
+                <a><img src="img/10400765_10203061848856224_7755905797997966081_n.jpg"></a>
+            </section>
+                
+            </section>
+            
+            
+            
+            
+            
+
+            
+            <section>
+                <h1>Përmbajtja</h1><br />
+                <ul>
+                    <li class="fragment">Hyrja</li>
+                    <li class="fragment">Materialet bazë që kërkohen per kete projekte</li>
+                    <li class="fragment">Principet e punës se quadcopterit</li>
+                    <li class="fragment">Diagrama Bllok</li>
+                    <li class="fragment">Diagrama e qarkut</li>
+                    <li class="fragment">Aplikimet</li>
+                    <li class="fragment">Referencat</li>
+                </ul>
+            </section>
+            
+            
+            
+
+        
+            
+            <section>
+                <h1>Hyrje</h1><br />
+                <ul>
+                    <li class="fragment">Viteve të fundit kemi parë një rritje masive të prodhimeve dhe shitjeve të objekteve fluturuese të njohura si multirotore helikoptere.</li>
+                    <li class="fragment">Shume here i referohemi dhe si Drone, Quadroters ose Quad Copters.
+</li>
+                    <li class="fragment">Këto UAV (Unmanned Aereil Vehicles) kanë kater krahë ku në secilën ndodhet nga një motorr. Krahët zakonisht vendosen në formën 'X' ose '+'.
+</li>
+                    <li class="fragment">Në quadcopter dy motorrë rrotullohen në sensin e drejtimit të kohës dy të tjerë në sensin e kundërt të kohës duke e bërë kështu që objekti të fluturojë në drejtime te caktuara.</li>
+                </ul>
+            </section>
+
+            
+
+            
+            
+            <section>
+                <h1>Materialet bazë</h1><br />
+                <h2>që kërkohen per kete projektë</h2>
+                <ul>
+                    <li class="fragment">MicroControlleri Multi-wii (ATmega32U4)</li>
+                    <li class="fragment">Motorri (1000g - 750rpm/v)</li>
+                    <li class="fragment">Transmetuesi dhe marrësi (2.5 GHz/5 Kanale Kontrolli)</li>
+                    <li class="fragment">Limituesi I rrymës në motorr (ESC)</li>
+                    <li class="fragment">Helikat që montohen në motor.</li>
+                    <li class="fragment">Burimi Energjisë Elektrike (Power Supply)</li>
+                    <li class="fragment">Një bazë e fortë për të mbajtur Strukturën. (Frame)</li>
+                </ul>
+            </section>
+            
+            
+            
+
+            
+            
+            <section>
+                <section>
+                <h1>Principet e punës</h1><br />
+                <ul>
+                    <h2>Quadcopteri</h2>
+                    <h4> është një paisje me një ndërthurje të elektronikës, mekanikës dhe kryesisht me parimin e aviacionit.
+Quadcopteri ka katër motorre ku shpejtësia e rrotullimit të tyre dhe drejtimi i rrotullimit të tyre varet nga dëshira e telekomanduesit per ta levizur paisjen në drejtime të vecanta.(Take Off Motion, Landing Motion, Forword Motion, Backward Motion).<p></p>
+
+Rrotullimet e motorrit varen nga sinjali i dërguar nga transmetuesi (5 kanalesh).<p></p>
+Sinjali nga Micro Controller-i shkon tek ESC i cili kontrollon shpejtësine e motorrit.</h4>
+                </ul>
+                </section>
+                
+                <section>
+                <h2>1. Principet e punës</h2>
+                <a><img src="img/1.png">
+                </section>
+                <section>
+                <h2>2. Principet e punës</h2><br />
+                <a><img src="img/2.png"></a>
+                </section>
+                <section>
+                <h2>3. Principet e punës</h2><br />
+                <a><img src="img/3.png"></a>
+                </section>
+            </section>
+            
+                
+     
+                
+                
+                
+            <section>
+
+                <h1>Diagrama Bllok</h1>
+                
+                <img src="img/bllok.png" alt="Smiley face" height="600" width="auto">
+
+            </section>
+
+            
+
+                
+                
+            <section><!-- App manifest -->
+
+                <h1>Diagrama qarkut</h1>
+                
+                <img src="img/layout.png" alt="Smiley face" height="600" width="auto">
+
+            </section>
+            
+                
+      
+                
+                
+            <section>
+                <section>
+                <h1>Aplikimet</h1><br />
+                
+                    <h3>Projekte në terren, si studimi i jetës së egër nga distanca.</h3>
+                
+                     <img src="img/foto3.PNG" alt="Smiley face" height="500" width="auto">
+                </section>
+                <section>
+                    <h3>Kapja e fotove dhe video-ve në eventet sportive.</h3>
+                
+                     <img src="img/foto0" alt="Smiley face" height="600" width="auto">
+                </section>
+                <section>
+                    <h3>Bërja e fotografive nga vende të vështira për tu arritur.</h3>
+                     <img src="img/foto.PNG" alt="Smiley face" height="600" width="auto">
+                </section>
+                <section>
+                    <h3>Monitorimi i kushteve Bujqësore dhe Mjedisore.</h3>
+                     <img src="img/foto1.PNG" alt="Smiley face" height="600" width="auto">
+                </section>
+                <section>
+                    <h3>Mënyre më e lehtë e inspektimit dhe monitorimit të projekteve të ndërtimit.</h3>
+                     <img src="img/foto2.PNG" alt="Smiley face" height="600" width="auto">
+                </section>
+            </section>    
+                
+                
+            <section>
+                    <section>
+                    <h1>Video</h1>
+                    <h3>Imazhe të filmuara në Shkollën Harry T. Fultz nga:</h3>
+                    <br />
+                    <ul>
+                        <li class="fragment"><a href="https://www.firebase.com/signup/">Toka</a></li>
+                        <li class="fragment"><a href="https://github.com/firebase/emberFire">Quadcopter-i</a></li></ul>
+                    </section>
+                
+                    <section>
+                        <video width="1000" height="auto" controls>
+  <source src="vid/Blue.mp4" type="video/mp4">
+                </video>
+                    </section>
+                    <section>
+                        <video width="1000" height="auto" controls>
+  <source src="vid/Green.mp4" type="video/mp4">
+                </video>
+                    </section>
+                    <section>
+                        <video width="1000" height="auto" controls>
+  <source src="vid/Orange.mp4" type="video/mp4">
+                </video>
+                    </section>
+                    <section>
+                
+                        <video width="1000" height="auto" controls>
+  <source src="vid/Red.mp4" type="video/mp4">
+                </video>
+                   </section>
+            </section>
+            
+           
+
+                <section>
+                    <h1>Shkarkojeni Prezantimin</h1>
+                    <h3>Ju mund ta shkarkoni këtë prezantim (GitHub) duke klikuar në linkun e mëposhtem.</h3>
+
+                    <div class="source">Shkarko: <a href="https://developer.mozilla.org/en-US/Firefox_OS/Using_the_App_Manager">Quadcopter Presantation RevealJS.</a></div>
+
+                </section>
+
+
+            </section>
+            
+            
+                    <section>
+                        <h1>Referancat</h1>
+                        <h3>(Burime të tjera)</h3>
+                        <br />
+                        <ul>
+                            <li class="fragment"><a href="http://google.com">Google</a></li>
+                            <li class="fragment"><a href="http://wikipedia.com">Wikipedia</a></li>
+                            <li class="fragment"><a href="http://www.droneflyers.com/">Forumi DroneFlyers</a></li>
+                        </ul>
+                    </section>
+
+
+            <section>
+
+               <h1>Faleminderit :)</h1>
+
+
+            </section>
+
+
+            <section>
+
+                <img src="img/fm.pic.profile.jpg" class="profile">
+                <a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                <img src="img/fm.pic.profile2.jpg" class="profile">
+
+                <h3>Besmir Zekaj&nbsp;&nbsp;&nbsp;&nbsp;Nardi Braho</h3>
+                <p>
+                    <a href="http://twitter.com/zekajbesi" alt="Besmir Zekaj twitter account">@zekajbesi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a href="http://twitter.com/nardi_b" alt="Nardi Braho twitter account">@nardi_b</a>
+                </p>
+
+
+                <br />
+
+                <a href="http://www.sites.google.com/site/zekajbesi/" class="image"> <img src="img/logo.png"></a>
+
+            </section>
+
+
+        </div>
+
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.min.js"></script>
+
+	<script>
+
+		// Full list of configuration options available here:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+			// Optional libraries used to extend on reveal.js
+			dependencies: [
+				{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+				{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			]
+		});
+
+	</script>
+
+</body>
+</html>
+
